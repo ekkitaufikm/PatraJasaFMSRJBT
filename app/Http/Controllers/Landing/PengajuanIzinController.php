@@ -70,12 +70,25 @@ class PengajuanIzinController extends Controller
             'isian_masuk'       => $request->isian_masuk,
             'surat_tempat'      => $request->surat_tempat,
             'surat_waktu'       => $suratWaktunew,
+            'status'            => 1,
         ];
 
         // dd($dataUsers); die();
         $this->mPengajuanIzin->create($dataPengajuanIzin);
 
-        return redirect("$this->url1")->with('sukses', 'Data Pengajuan Izin Keluar Masuk berhasil di tambahkan');
+        return redirect("$this->url/thanks")->with('sukses', 'Data Pengajuan Izin Keluar Masuk berhasil di tambahkan');
+    }
+    
+    public function thanks()
+    {
+        // Get Data
+
+        $data = [
+            'title'     => $this->title,
+            'url'       => $this->url,
+            'page'      => 'Input Data Izin Keluar Masuk Telah Berhasil',
+        ];
+        return view($this->views . "/thanks", $data);
     }
 
     public function show($id)

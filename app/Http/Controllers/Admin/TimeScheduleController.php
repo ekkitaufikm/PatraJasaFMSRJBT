@@ -11,6 +11,7 @@ use Str;
 use File;
 
 use App\Models\TimeScheduleModel;
+use App\Models\UserModel;
 use App\Models\AreaModel;
 
 class TimeScheduleController extends Controller
@@ -30,6 +31,7 @@ class TimeScheduleController extends Controller
 
         // Panggil disini biar lebih ringkas
         $this->mTimeSchedule       = new TimeScheduleModel();
+        $this->mUsers            = new UserModel();
         $this->mArea            = new AreaModel();
     }
 
@@ -38,6 +40,7 @@ class TimeScheduleController extends Controller
 
         $time_schedule  = $this->mTimeSchedule->get();
         $area           = $this->mArea->get();
+        $users      = $this->mUsers->where('role', 2)->get();
 
         $data = [
             'title'          => $this->title,
@@ -45,6 +48,7 @@ class TimeScheduleController extends Controller
             'page'           => 'Data Time Schedule Supervisor',
             'time_schedule'  => $time_schedule,
             'area'           => $area,
+            'users'         => $users,
         ];
 
         // View, menuju file index di dalam folder = admin/mPerpusJurusan
@@ -56,12 +60,14 @@ class TimeScheduleController extends Controller
     public function create()
     {
         $area           = $this->mArea->get();
+        $users      = $this->mUsers->where('role', 2)->get();
 
         $data = [
             'title'             => $this->title,
             'url'               => $this->url,
             'page'              => 'Tambah Data Time Schedule Supervisor',
             'area'              => $area,
+            'users'         => $users,
         ];
         // View, menuju file index di dalam folder = admin/mprovinsi
         return view($this->views . "/create", $data);
@@ -78,7 +84,7 @@ class TimeScheduleController extends Controller
 
         $dataTimeSchedule = [
             'nama'          => $fileName,
-            'supervisor'    => $request->supervisor,
+            'idUsers'       => $request->idUsers,
             'idArea'        => $request->idArea,
         ];
 

@@ -61,6 +61,7 @@
                                             <th class="min-w-125px">Tanggal Upload</th>
                                             <th class="min-w-125px">Nama Supervisor</th>
                                             <th class="min-w-125px">Area</th>
+                                            <th class="min-w-125px">File</th>
                                         </tr>
                                         <!--end::Table row-->
                                     </thead>
@@ -69,10 +70,17 @@
                                     <tbody>
                                         @foreach ($laporan_mingguan as $p)
                                         <tr>
-                                                <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $p->created_at }}</td>
-                                                <td>{{ $p->supervisor }}</td>
-                                                <td>{{ $p->area->nama }}</td>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $p->created_at }}</td>
+                                            <td>{{ $p->users->nama }}</td>
+                                            <td>{{ $p->area->nama }}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary">
+                                                    <a href="{{ url('upload/excel/laporan_mingguan/') }}/{{$p->nama }}">
+                                                        <span class="text-light text-hover-primary">Download</span>
+                                                    </a>
+                                                </button>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>

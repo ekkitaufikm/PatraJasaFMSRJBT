@@ -61,19 +61,14 @@
                             <table id="datatable" class="table text-left">
                                 <tbody>
                                     <tr>
-                                        <td class="text-sm-end">Nama Item</td>
+                                        <td class="text-sm-end"><b>Nama Man Power</b></td>
                                         <td>:</td>
-                                        <td class="text-sm-start">{{ $checklist->item }}</td>
+                                        <td class="text-sm-start"><b>{{ $checklist->nama }}</b></td>
                                     </tr>
                                     <tr>
-                                        <td class="text-sm-end">Pukul</td>
+                                        <td class="text-sm-end"><b>Nopeg Man Power</b></td>
                                         <td>:</td>
-                                        <td class="text-sm-start">{{ $checklist->pukul }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-sm-end">Dibersihkan</td>
-                                        <td>:</td>
-                                        <td class="text-sm-start">{{ $checklist->bersihan }}</td>
+                                        <td class="text-sm-start"><b>{{ $checklist->nip }}</b></td>
                                     </tr>
                                     <tr>
                                         <td class="text-sm-end">Area</td>
@@ -81,14 +76,74 @@
                                         <td class="text-sm-start">{{ $checklist->area->nama }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="text-sm-end">Nama Man Power</td>
-                                        <td>:</td>
-                                        <td class="text-sm-start">{{ $checklist->nama }}</td>
-                                    </tr>
-                                    <tr>
                                         <td class="text-sm-end">Nama Supervisor</td>
                                         <td>:</td>
                                         <td class="text-sm-start">{{ $checklist->users->nama }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Area Toilet</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->area_toilet ?? 'Belum Ada Data' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Tanggal</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->tanggal }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Pukul</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->pukul }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Floor</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->floor }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Wall</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->wall }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Rubbish Bin</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->rubbish_bin }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Mirror</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->mirror }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Hand Soap</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->hand_soap }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Tissue</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->tissue }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Wastafel</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->wastafel }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Toilet Bowl</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->toilet_bowl }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Urinoir</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->urinoir }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Hand Dryer</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $checklist->hand_dryer }}</td>
                                     </tr>
                                 </tbody>
                             </table>

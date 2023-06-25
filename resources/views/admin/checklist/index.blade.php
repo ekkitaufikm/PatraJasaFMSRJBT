@@ -69,11 +69,9 @@
                                     <!--begin::Table row-->
                                     <tr class="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
                                         <th>No</th>
-                                        <th class="min-w-125px">Nama Item</th>
-                                        <th class="min-w-125px">Pukul</th>
-                                        <th class="min-w-125px">Dibersihkan</th>
+                                        <th class="min-w-125px">Tanggal</th>
                                         <th class="min-w-125px">Nama Man Power</th>
-                                        <th class="min-w-125px">Supervisor</th>
+                                        <th class="min-w-125px">Nopeg</th>
                                         <th class="min-w-125px">Status</th>
                                         <th class="min-w-125px">Actions</th>
                                     </tr>
@@ -85,11 +83,9 @@
                                     @foreach ($checklist as $p)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $p->item }}</td>
-                                            <td>{{ $p->pukul }}</td>
-                                            <td>{{ $p->bersihan }}</td>
+                                            <td>{{ $p->tanggal }}</td>
                                             <td>{{ $p->nama }}</td>
-                                            <td>{{ $p->users->nama }}</td>
+                                            <td>{{ $p->nip }}</td>
                                             <td>
                                                 @if ($p->status == 1)
                                                     <span class="badge badge-light-primary">Dalam Proses</span>    

@@ -73,6 +73,7 @@
                                                 <option value="">Pilih Tindakan</option>
                                                     <option value="2">Revisi</option>
                                                     <option value="3">Disetujui</option>
+                                                    <option value="4">Tidak Disetujui</option>
                                             </select >
                                         </div>
                                     @elseif ($cuti->status == 2)

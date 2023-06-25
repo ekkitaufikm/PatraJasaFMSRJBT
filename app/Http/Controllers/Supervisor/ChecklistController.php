@@ -23,7 +23,7 @@ class ChecklistController extends Controller
     private $url        = 'supervisor/checklist';
     
     // Title head
-    private $title      = 'Halaman Data Checklist';
+    private $title      = 'Halaman Data Checklist Toilet';
 
     public function __construct()
     {
@@ -48,7 +48,7 @@ class ChecklistController extends Controller
         $data = [
             'title'         => $this->title,
             'url'           => $this->url,
-            'page'          => 'Data Checklist',
+            'page'          => 'Data Checklist Toilet',
             'users'         => $users,
             'checklist'     => $checklist,
             'area'          => $area,
@@ -84,7 +84,7 @@ class ChecklistController extends Controller
         $data = [
             'title'             => $this->title,
             'url'               => $this->url,
-            'page'              => 'Detail Data Checklist',
+            'page'              => 'Detail Data Checklist Toilet',
             'checklist'         => $checklist,
             'users'             => $users,
             'area'              => $area,
@@ -105,7 +105,7 @@ class ChecklistController extends Controller
         $data = [
             'title'             => $this->title,
             'url'               => $this->url,
-            'page'              => 'Edit Data Checklist',
+            'page'              => 'Edit Data Checklist Toilet',
             'checklist'         => $checklist,
             'users'             => $users,
             'area'              => $area,
@@ -123,18 +123,21 @@ class ChecklistController extends Controller
             ];
             // echo json_encode($dataPengajuanCuti); die();
             $this->mChecklist->where('id', $id)->update($dataChecklist);
-            return redirect("$this->url")->with('sukses', 'Data Checklist berhasil diberi Tindakan');
+            return redirect("$this->url")->with('sukses', 'Data Checklist Toilet berhasil diberi Tindakan');
         }else{
             $dataChecklist = [
+                'pukul'             => $request->pukul,
+                'tanggal'           => $request->tanggal,
                 'nama'              => $request->nama,
+                'nip'               => $request->nip,
+                'area_toilet'       => $request->area_toilet,              
                 'idUsers'           => $request->idUsers,
-                'bersihan'          => $request->bersihan,
                 'status'            => 1,
             ];
 
             // echo json_encode($dataChecklist); die();
             $this->mChecklist->where('id', $id)->update($dataChecklist);
-            return redirect("$this->url")->with('sukses', 'Data Checklist berhasil di edit');
+            return redirect("$this->url")->with('sukses', 'Data Checklist Toilet berhasil di edit');
         }
        
         // dd($request->all());

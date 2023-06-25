@@ -116,15 +116,7 @@ class ProfilController extends Controller
                 'nip'           => $request->nip,
                 'password'      => Hash::make($request->password),
                 'sandi'         => $request->password,
-                'no_ktp'        => $request->no_ktp,
-                'no_bpjskes'    => $request->no_bpjskes,
-                'no_bpjsket'    => $request->no_bpjsket,
                 'idArea'        => $request->idArea,
-                'alamat'        => $request->alamat,
-                'nohp'          => $request->nohp,
-                'uk_baju'       => $request->uk_baju,
-                'uk_celana'     => $request->uk_celana,
-                'uk_sepatu'     => $request->uk_sepatu,
             ];
             $this->mUsers->where('idUsers', $request->idUsers)->update($dataUsers);
             return redirect("$this->url")->with('sukses', 'Data Profile berhasil di edit');
@@ -135,15 +127,7 @@ class ProfilController extends Controller
                 'nip'           => $request->nip,
                 'password'      => Hash::make($request->password),
                 'sandi'         => $request->password,
-                'no_ktp'        => $request->no_ktp,
-                'no_bpjskes'    => $request->no_bpjskes,
-                'no_bpjsket'    => $request->no_bpjsket,
                 'idArea'        => $request->idArea,
-                'alamat'        => $request->alamat,
-                'nohp'          => $request->nohp,
-                'uk_baju'       => $request->uk_baju,
-                'uk_celana'     => $request->uk_celana,
-                'uk_sepatu'     => $request->uk_sepatu,
             ];
             // dd($dataUsers);
             $this->mUsers->where('idUsers', $request->idUsers)->update($dataUsers);

@@ -83,6 +83,11 @@
                                             {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
                                         </div>
                                         <div class="mb-3">
+                                            <label class="col-form-label pt-0">Nopeg</label>
+                                            <input name="nip" class="form-control" type="text" value="{{ $checklist->nip }}">
+                                            {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
+                                        </div>
+                                        <div class="mb-3">
                                             <label class="col-form-label pt-0">Area</label>
                                             <select id="select-sem" class="form-select select2" name="idArea" disabled aria-label="Default select example" required>
                                                 <option value="">Pilih Area</option>
@@ -101,29 +106,19 @@
                                             </select >
                                         </div>
                                         <div class="mb-3">
-                                            <label class="label-text">Apakah Sudah Dibersihkan?</label>
-                                            <div class="d-flex">
-                                                <!--begin::Checkbox-->
-                                                <label class="form-check form-check-custom form-check-solid me-10">
-                                                    <!--begin::Input-->
-                                                    <input class="form-check-input h-20px w-20px" type="checkbox" name="bersihan" value="Sudah" />
-                                                    <!--end::Input-->
-                                                    <!--begin::Label-->
-                                                    <span class="form-check-label fw-bold">Sudah</span>
-                                                    <!--end::Label-->
-                                                </label>
-                                                <!--end::Checkbox-->
-                                                <!--begin::Checkbox-->
-                                                <label class="form-check form-check-custom form-check-solid">
-                                                    <!--begin::Input-->
-                                                    <input class="form-check-input h-20px w-20px" name="bersihan" type="checkbox" value="Belum" />
-                                                    <!--end::Input-->
-                                                    <!--begin::Label-->
-                                                    <span class="form-check-label fw-bold">Belum</span>
-                                                    <!--end::Label-->
-                                                </label>
-                                                <!--end::Checkbox-->
-                                            </div>
+                                            <label class="col-form-label pt-0">Area Toilet</label>
+                                            <input name="area_toilet" class="form-control" type="text" value="{{ $checklist->area_toilet }}">
+                                            {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="col-form-label pt-0">Tanggal</label>
+                                            <input name="tanggal" class="form-control" type="text" value="{{ $checklist->tanggal }}">
+                                            {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="col-form-label pt-0">Jam Pembersihan</label>
+                                            <input name="pukul" class="form-control" type="text" value="{{ $checklist->pukul }}">
+                                            {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
                                         </div>
                                     @endif
 

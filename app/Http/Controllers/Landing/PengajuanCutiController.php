@@ -73,17 +73,31 @@ class PengajuanCutiController extends Controller
             'idArea'            => $request->idArea,
             'tanggal_cuti'      => $request->tanggal_cuti,
             'tanggal_pengajuan' => $request->tanggal_pengajuan,
+            'sampai_tanggal'    => $request->sampai_tanggal,
             'idUsers'           => $request->idUsers,
             'rekan'             => $request->rekan,
             'idJabatan'         => $request->idJabatan,
             'idMCuti'           => $request->idMCuti,
             'keterangan'        => $request->keterangan,
+            'status'            => 1,
         ];
 
         // dd($dataUsers); die();
         $this->mCuti->create($dataPengajuanCuti);
 
-        return redirect("$this->url1")->with('sukses', 'Data Pengajuan Cuti berhasil di tambahkan');
+        return redirect("$this->url/thanks")->with('sukses', 'Data Pengajuan Cuti berhasil di tambahkan');
+    }
+    
+    public function thanks()
+    {
+        // Get Data
+
+        $data = [
+            'title'     => $this->title,
+            'url'       => $this->url,
+            'page'      => 'Input Data Cuti Telah Berhasil',
+        ];
+        return view($this->views . "/thanks", $data);
     }
 
     public function show($id)

@@ -67,8 +67,12 @@
                                 <div class="card-body">
                                     <div class="mb-3">
                                         <label class="col-form-label pt-0">Nama Supervisor</label>
-                                        <input name="supervisor" class="form-control" type="text" placeholder="Nama Supervisor">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
+                                        <select id="select-sem" class="form-select select2" name="idUsers" aria-label="Default select example" required>
+                                            <option value="">Pilih Nama Supervisor</option>
+                                            @foreach ($users as $r) 
+                                                <option value="{{ $r->idUsers }}">{{ $r->nama }}</option>
+                                            @endforeach
+                                        </select >
                                     </div>
                                     <div class="mb-3">
                                         <label class="col-form-label pt-0">Area</label>
@@ -81,8 +85,8 @@
                                     </div>
                                     <div class="mb-3">
                                         <label class="col-form-label pt-0">File Laporan Mingguan Supervisor</label>
-                                        <input class="form-control" name="laporanMingguan" type="file" accept=".csv, .xls, .xlsx">
-                                        <span class="form-text fs-6 text-muted">File csv, xls dan xlsx Max 1 Mb</span>
+                                        <input class="form-control" name="laporanMingguan" type="file" accept=".csv, .xls, .xlsx, .pdf">
+                                        <span class="form-text fs-6 text-muted">File csv, xls, xlsx, dan pdf Max 1 Mb</span>
                                         {{-- <input type="file" class="form-control mb-2" name> --}}
                                         {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
                                     </div>

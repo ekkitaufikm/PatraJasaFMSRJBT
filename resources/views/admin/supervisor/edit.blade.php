@@ -92,21 +92,6 @@
                                         </select >
                                     </div>
                                     <div class="mb-3">
-                                        <label class="col-form-label pt-0">Nomor KTP</label>
-                                        <input name="no_ktp" class="form-control" type="text" value="{{ $users->no_ktp }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">No BPJS Kesehatan</label>
-                                        <input name="no_bpjskes" class="form-control" type="text" value="{{ $users->no_bpjskes }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">No BPJS Ketenagakerjaan</label>
-                                        <input name="no_bpjsket" class="form-control" type="text" value="{{ $users->no_bpjsket }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
                                         <label class="col-form-label pt-0">Jenis Kelamin</label>
                                         <select id="select-sem" class="form-select select2" name="idKelamin" aria-label="Default select example" required>
                                             <option value="">Pilih Kelamin</option>
@@ -132,31 +117,6 @@
                                                 <option value="{{ $r->idArea }}">{{ $r->nama }}</option>
                                             @endforeach
                                         </select >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">Alamat</label>
-                                        <input name="alamat" class="form-control" type="text" value="{{ $users->alamat }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">No HP</label>
-                                        <input name="nohp" class="form-control" type="text" value="{{ $users->nohp }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">Ukuran Baju</label>
-                                        <input name="uk_baju" class="form-control" type="text" value="{{ $users->uk_baju }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">Ukuran Celana</label>
-                                        <input name="uk_celana" class="form-control" type="text" value="{{ $users->uk_celana }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">Ukuran Sepatu</label>
-                                        <input name="uk_sepatu" class="form-control" type="text" value="{{ $users->uk_sepatu }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
                                     </div>
                                     <div class="mb-3">
                                         <label class="col-form-label pt-0">Status</label>

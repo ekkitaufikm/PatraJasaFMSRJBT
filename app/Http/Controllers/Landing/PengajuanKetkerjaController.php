@@ -72,7 +72,19 @@ class PengajuanKetkerjaController extends Controller
         // dd($dataUsers); die();
         $this->mPengajuanKetkerja->create($dataPengajuanKetKerja);
 
-        return redirect("$this->url1")->with('sukses', 'Data Pengajuan Keterangan Kerja berhasil di tambahkan');
+        return redirect("$this->url/thanks")->with('sukses', 'Data Pengajuan Keterangan Kerja berhasil di tambahkan');
+    }
+    
+    public function thanks()
+    {
+        // Get Data
+
+        $data = [
+            'title'     => $this->title,
+            'url'       => $this->url,
+            'page'      => 'Input Data Keterangan Kerja Telah Berhasil',
+        ];
+        return view($this->views . "/thanks", $data);
     }
 
     public function show($id)

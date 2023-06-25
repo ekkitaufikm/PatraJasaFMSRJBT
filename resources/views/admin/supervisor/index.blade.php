@@ -92,13 +92,6 @@
                                         <th class="min-w-125px">Cuti</th>
                                         <th class="min-w-125px">Jenis Kelamin</th>
                                         <th class="min-w-125px">Agama</th>
-                                        <th class="min-w-125px">No KTP</th>
-                                        <th class="min-w-125px">No BPJS Kesehatan</th>
-                                        <th class="min-w-125px">No BPJS Ketenagakerjaan</th>
-                                        <th class="min-w-125px">Ukuran Baju</th>
-                                        <th class="min-w-125px">Ukuran Celana</th>
-                                        <th class="min-w-125px">Ukuran Sepatu</th>
-                                        <th class="min-w-125px">Alamat</th>
                                         <th class="min-w-125px">Jabatan</th>
                                         <th class="min-w-125px">Area</th>
                                         <th class="min-w-125px">Status</th>
@@ -128,13 +121,6 @@
                                             </td>
                                             <td>{{ $p->kelamin->nama }}</td>
                                             <td>{{ $p->agama->nama }}</td>
-                                            <td>{{ $p->no_ktp }}</td>
-                                            <td>{{ $p->no_bpjskes }}</td>
-                                            <td>{{ $p->no_bpjsket }}</td>
-                                            <td>{{ $p->uk_baju }}</td>
-                                            <td>{{ $p->uk_celana }}</td>
-                                            <td>{{ $p->uk_sepatu }}</td>
-                                            <td>{{ $p->alamat }}</td>
                                             <td>{{ $p->jabatan->nama }}</td>
                                             <td>{{ $p->area->nama }}</td>
                                             <td>

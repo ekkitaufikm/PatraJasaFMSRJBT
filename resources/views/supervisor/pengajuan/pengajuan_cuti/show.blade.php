@@ -76,14 +76,19 @@
                                         <td class="text-sm-start">{{ $cuti->area->nama }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="text-sm-end">Tanggal Cuti</td>
+                                        <td class="text-sm-end">Tanggal Pengajuan</td>
+                                        <td>:</td>
+                                        <td class="text-sm-start">{{ $cuti->tanggal_pengajuan }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm-end">Tanggal Mulai Cuti</td>
                                         <td>:</td>
                                         <td class="text-sm-start">{{ $cuti->tanggal_cuti }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="text-sm-end">Tanggal Pengajuan</td>
+                                        <td class="text-sm-end">Cuti Sampai Tanggal</td>
                                         <td>:</td>
-                                        <td class="text-sm-start">{{ $cuti->tanggal_cuti }}</td>
+                                        <td class="text-sm-start">{{ $cuti->sampai_tanggal }}</td>
                                     </tr>
                                     <tr>
                                         <td class="text-sm-end">Jabatan</td>

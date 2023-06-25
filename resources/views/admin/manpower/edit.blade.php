@@ -79,48 +79,31 @@
                                     </div>
                                     <div class="mb-3">
                                         <label class="col-form-label pt-0">Agama</label>
+                                        <input type="hidden" name="idAgama" value="{{ $manpower->idAgama }}">
                                         <select id="select-sem" class="form-select select2" name="idAgama" aria-label="Default select example" required>
                                             <option value="">Pilih Agama</option>
                                             @foreach ($agama as $r) 
-                                                <option value="{{ $r->idAgama }}">{{ $r->nama }}</option>
+                                                <option value="{{ $r->idAgama }}" {{ $r->idAgama == $manpower->idAgama ? 'selected' : '' }}>{{ $r->nama }}</option>
                                             @endforeach
                                         </select >
                                     </div>
                                     <div class="mb-3">
-                                        <label class="col-form-label pt-0">Alamat</label>
-                                        <input name="alamat" class="form-control" type="text" value="{{ $manpower->alamat }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">Nomor KTP</label>
-                                        <input name="no_ktp" class="form-control" type="text" value="{{ $manpower->no_ktp }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">No BPJS Kesehatan</label>
-                                        <input name="no_bpjskes" class="form-control" type="text" value="{{ $manpower->no_bpjskes }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">No BPJS Ketenagakerjaan</label>
-                                        <input name="no_bpjsket" class="form-control" type="text" value="{{ $manpower->no_bpjsket }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
                                         <label class="col-form-label pt-0">Jenis Kelamin</label>
+                                        <input type="hidden" name="idKelamin" value="{{ $manpower->idKelamin }}">
                                         <select id="select-sem" class="form-select select2" name="idKelamin" aria-label="Default select example" required>
                                             <option value="">Pilih Kelamin</option>
                                             @foreach ($jenis_kelamin as $r) 
-                                                <option value="{{ $r->idKelamin }}">{{ $r->nama }}</option>
+                                                <option value="{{ $r->idKelamin }}" {{ $r->idKelamin == $manpower->idKelamin ? 'selected' : '' }}>{{ $r->nama }}</option>
                                             @endforeach
                                         </select >
                                     </div>
                                     <div class="mb-3">
                                         <label class="col-form-label pt-0">Jabatan</label>
+                                        <input type="hidden" name="idJabatan" value="{{ $manpower->idJabatan }}">
                                         <select id="select-sem" class="form-select select2" name="idJabatan" aria-label="Default select example" required>
                                             <option value="">Pilih Jabatan</option>
                                             @foreach ($jabatan as $r) 
-                                                <option value="{{ $r->idJabatan }}">{{ $r->nama }}</option>
+                                                <option value="{{ $r->idJabatan }}" {{ $r->idJabatan == $manpower->idJabatan ? 'selected' : '' }}>{{ $r->nama }}</option>
                                             @endforeach
                                         </select >
                                     </div>
@@ -130,45 +113,32 @@
                                         {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
                                     </div>
                                     <div class="mb-3">
-                                        <label class="col-form-label pt-0">Nama Supervisor</label>
-                                        <input name="idArea" class="form-control" type="text" disabled value="{{ $manpower->area->nama }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">No HP</label>
-                                        <input name="nohp" class="form-control" type="text" value="{{ $manpower->nohp }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">Ukuran Baju</label>
-                                        <input name="uk_baju" class="form-control" type="text" value="{{ $manpower->uk_baju }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">Ukuran Celana</label>
-                                        <input name="uk_celana" class="form-control" type="text" value="{{ $manpower->uk_celana }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="col-form-label pt-0">Ukuran Sepatu</label>
-                                        <input name="uk_sepatu" class="form-control" type="text" value="{{ $manpower->uk_sepatu }}">
-                                        {{-- penempatan name selalu sebelah input ya, biar gampang di cek --}}
+                                        <label class="col-form-label pt-0">Area</label>
+                                        <input type="hidden" name="idArea" value="{{ $manpower->idArea }}">
+                                        <select id="select-sem" class="form-select select2" name="idArea" aria-label="Default select example" required>
+                                            <option value="">Pilih Area</option>
+                                            @foreach ($area as $r) 
+                                                <option value="{{ $r->idArea }}" {{ $r->idArea == $manpower->idArea ? 'selected' : '' }}>{{ $r->nama}}</option>
+                                            @endforeach
+                                        </select >
                                     </div>
                                     <div class="mb-3">
                                         <label class="col-form-label pt-0">Status</label>
+                                        <input type="hidden" name="idStatus" value="{{ $manpower->idStatus }}">
                                         <select id="select-sem" class="form-select select2" name="idStatus" aria-label="Default select example" required>
                                             <option value="">Pilih Status</option>
                                             @foreach ($status as $r) 
-                                                <option value="{{ $r->idStatus }}">{{ $r->nama }}</option>
+                                                <option value="{{ $r->idStatus }}" {{ $r->idStatus == $manpower->idStatus ? 'selected' : '' }}>{{ $r->nama }}</option>
                                             @endforeach
                                         </select >
                                     </div>
                                     <div class="mb-3">
                                         <label class="col-form-label pt-0">Role</label>
+                                        <input type="hidden" name="idRole" value="{{ $manpower->idRole }}">
                                         <select id="select-sem" class="form-select select2" name="idRole" aria-label="Default select example" required>
                                             <option value="">Pilih Role</option>
                                             @foreach ($role as $r) 
-                                                <option value="{{ $r->idRole }}">{{ $r->nama }}</option>
+                                                <option value="{{ $r->idRole }}" {{ $r->idRole == $manpower->idRole ? 'selected' : '' }}>{{ $r->nama }}</option>
                                             @endforeach
                                         </select >
                                     </div>

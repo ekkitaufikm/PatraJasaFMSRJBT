@@ -123,7 +123,16 @@
                                 </div>
                                 <div class="col-lg-6 responsive-column">
                                     <div class="input-box">
-                                        <label class="label-text">Tanggal Cuti</label>
+                                        <label class="label-text">Tanggal Pengajuan</label>
+                                        <div class="form-group">
+                                            <span class="la la-calendar form-icon"></span>
+                                            <input class="date-range form-control" type="date" name="tanggal_pengajuan">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Tanggal Mulai Cuti</label>
                                         <div class="form-group">
                                             <span class="la la-calendar form-icon"></span>
                                             <input class="date-range form-control" type="date" name="tanggal_cuti">
@@ -132,10 +141,10 @@
                                 </div>
                                 <div class="col-lg-6 responsive-column">
                                     <div class="input-box">
-                                        <label class="label-text">Tanggal Pengajuan</label>
+                                        <label class="label-text">Cuti Sampai Tanggal</label>
                                         <div class="form-group">
                                             <span class="la la-calendar form-icon"></span>
-                                            <input class="date-range form-control" type="date" name="tanggal_pengajuan">
+                                            <input class="date-range form-control" type="date" name="sampai_tanggal">
                                         </div>
                                     </div>
                                 </div>

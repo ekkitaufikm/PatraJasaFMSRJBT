@@ -24,7 +24,7 @@ class ChecklistController extends Controller
     private $url1       = 'landing';
     
     // Title head
-    private $title      = 'Halaman Checklist Kebersihan';
+    private $title      = 'Halaman Checklist Toilet';
 
     public function __construct()
     {
@@ -54,7 +54,7 @@ class ChecklistController extends Controller
         $data = [
             'title'         => $this->title,
             'url'           => $this->url,
-            'page'          => 'Input Checklist Kebersihan',
+            'page'          => 'Input Checklist Toilet',
             'users'         => $users,
             'checklist'     => $checklist,
             'area'          => $area,
@@ -69,19 +69,42 @@ class ChecklistController extends Controller
     public function store(Request $request)
     {
         $dataChecklist = [
-            'item'              => $request->item,
             'pukul'             => $request->pukul,
+            'tanggal'           => $request->tanggal,
             'nama'              => $request->nama,
+            'nip'               => $request->nip,
             'idArea'            => $request->idArea,
+            'area_toilet'       => $request->area_toilet,  
             'idUsers'           => $request->idUsers,
-            'bersihan'          => $request->bersihan,
+            'floor'             => $request->floor,
+            'wall'              => $request->wall,
+            'rubbish_bin'       => $request->rubbish_bin,
+            'mirror'            => $request->mirror,
+            'hand_soap'         => $request->hand_soap,
+            'tissue'            => $request->tissue,
+            'wastafel'          => $request->wastafel,
+            'toilet_bowl'       => $request->toilet_bowl,
+            'urinoir'           => $request->urinoir,
+            'hand_dryer'        => $request->hand_dryer,
             'status'            => 1,
         ];
 
         // dd($dataUsers); die();
         $this->mChecklist->create($dataChecklist);
 
-        return redirect("$this->url1")->with('sukses', 'Data Checklist Kebersihan berhasil di tambahkan');
+        return redirect("$this->url/thanks")->with('sukses', 'Data Checklist Toilet berhasil di tambahkan');
+    }
+    
+    public function thanks()
+    {
+        // Get Data
+
+        $data = [
+            'title'     => $this->title,
+            'url'       => $this->url,
+            'page'      => 'Input Data Checklist Telah Berhasil',
+        ];
+        return view($this->views . "/thanks", $data);
     }
 
     public function show($id)

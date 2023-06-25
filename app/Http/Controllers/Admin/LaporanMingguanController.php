@@ -11,6 +11,7 @@ use Str;
 use File;
 
 use App\Models\LaporanMingguanModel;
+use App\Models\UserModel;
 use App\Models\AreaModel;
 
 class LaporanMingguanController extends Controller
@@ -30,6 +31,7 @@ class LaporanMingguanController extends Controller
 
         // Panggil disini biar lebih ringkas
         $this->mLaporanMingguan            = new LaporanMingguanModel();
+        $this->mUsers            = new UserModel();
         $this->mArea           = new AreaModel();
     }
 
@@ -38,6 +40,7 @@ class LaporanMingguanController extends Controller
 
         $laporan_mingguan = $this->mLaporanMingguan->get();
         $area             = $this->mArea->get();
+        $users      = $this->mUsers->where('role', 2)->get();
 
         $data = [
             'title'                 => $this->title,
@@ -45,6 +48,7 @@ class LaporanMingguanController extends Controller
             'page'                  => 'Data Laporan Mingguan Supervisor',
             'laporan_mingguan'      => $laporan_mingguan,
             'area'                  => $area,
+            'users'         => $users,
         ];
 
         // View, menuju file index di dalam folder = admin/mPerpusJurusan
@@ -56,12 +60,14 @@ class LaporanMingguanController extends Controller
     public function create()
     {
         $area           = $this->mArea->get();
+        $users      = $this->mUsers->where('role', 2)->get();
 
         $data = [
             'title'             => $this->title,
             'url'               => $this->url,
             'page'              => 'Tambah Data Laporan Mingguan Supervisor',
             'area'              => $area,
+            'users'         => $users,
         ];
         // View, menuju file index di dalam folder = admin/mprovinsi
         return view($this->views . "/create", $data);
@@ -78,7 +84,7 @@ class LaporanMingguanController extends Controller
 
         $dataLaporanMingguan = [
             'nama'          => $fileName,
-            'supervisor'    => $request->supervisor,
+            'idUsers'       => $request->idUsers,
             'idArea'        => $request->idArea,
         ];
 

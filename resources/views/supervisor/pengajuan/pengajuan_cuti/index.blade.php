@@ -80,8 +80,10 @@
                                         <th>No</th>
                                         <th class="min-w-125px">Nama</th>
                                         <th class="min-w-125px">Nopeg</th>
-                                        <th class="min-w-125px">Tanggal</th>
                                         <th class="min-w-125px">Tanggal Pengajuan</th>
+                                        <th class="min-w-125px">Tanggal Mulai Cuti</th>
+                                        <th class="min-w-125px">Sampai Tanggal</th>
+                                        <th class="min-w-125px">Status</th>
                                         <th class="min-w-125px">Action</th>
                                     </tr>
                                     <!--end::Table row-->
@@ -94,10 +96,30 @@
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $p->nama }}</td>
                                             <td>{{ $p->nip  }}</td>
-                                            <td>{{ $p->tanggal_cuti }}</td>
                                             <td>{{ $p->tanggal_pengajuan }}</td>
+                                            <td>{{ $p->tanggal_cuti }}</td>
+                                            <td>{{ $p->sampai_tanggal }}</td>
                                             <td>
+                                                @if ($p->status == 1)
+                                                    <span class="badge badge-light-primary">Dalam Proses</span>    
+                                                @elseif ($p->status == 2)
+                                                <span class="badge badge-light-warning me-auto">Revisi</span>
+                                                @elseif ($p->status == 3)
+                                                <span class="badge badge-light-success me-auto">Sukses</span>
+                                                @elseif ($p->status == 4)
+                                                <span class="badge badge-light-danger me-auto">Tidak Disetujui</span>
+                                                @endif
+                                            </td>       
+                                            <td>
+                                                @if ($p->status == 1)
+                                                <a href="{{ url('supervisor/pengajuan_cuti') }}/{{ $p->idCuti }}/edit" class="btn btn-primary" title="Detail">Verifikasi</a>
                                                 <a href="{{ url("$url/" . $p->idCuti, []) }}" class="btn btn-primary" title="Detail">Detail</a>
+                                                @elseif ($p->status == 2)
+                                                <a href="{{ url('supervisor/pengajuan_cuti') }}/{{ $p->idCuti }}/edit" class="btn btn-primary" title="Revisi">Revisi</a>
+                                                @elseif ($p->status == 3)
+                                                <a href="{{ url("$url/" . $p->idCuti, []) }}" class="btn btn-primary" title="Detail">Detail</a>
+                                                @endif
+                                                
                                             </td>
                                         </tr>
                                     @endforeach

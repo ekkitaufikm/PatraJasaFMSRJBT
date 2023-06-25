@@ -70,12 +70,25 @@ class PengajuanLemburController extends Controller
             'waktu_dari'        => $request->waktu_dari,
             'waktu_sampai'      => $request->waktu_sampai,
             'namaPekerjaan'     => $request->namaPekerjaan,
+            'status'            => 1,
         ];
 
         // dd($dataUsers); die();
         $this->mPengajuanLembur->create($dataPengajuanLembur);
 
-        return redirect("$this->url1")->with('sukses', 'Data Pengajuan Lembur berhasil di tambahkan');
+        return redirect("$this->url/thanks")->with('sukses', 'Data Pengajuan Lembur berhasil di tambahkan');
+    }
+    
+    public function thanks()
+    {
+        // Get Data
+
+        $data = [
+            'title'     => $this->title,
+            'url'       => $this->url,
+            'page'      => 'Input Data Lembur Telah Berhasil',
+        ];
+        return view($this->views . "/thanks", $data);
     }
 
     public function show($id)

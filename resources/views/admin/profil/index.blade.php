@@ -190,95 +190,11 @@
                     <!--begin::Input group-->
                     <div class="row mb-7">
                         <!--begin::Label-->
-                        <label class="col-lg-4 fw-bold text-muted">No KTP</label>
+                        <label class="col-lg-4 fw-bold text-muted">Jenis Kelamin</label>
                         <!--end::Label-->
                         <!--begin::Col-->
                         <div class="col-lg-8 fv-row">
-                            <span class="fw-bold text-gray-800 fs-6">{{ $users->no_ktp }}</span>
-                        </div>
-                        <!--end::Col-->
-                    </div>
-                    <!--end::Input group-->
-                    <!--begin::Input group-->
-                    <div class="row mb-7">
-                        <!--begin::Label-->
-                        <label class="col-lg-4 fw-bold text-muted">No BPJS Kesehatan</label>
-                        <!--end::Label-->
-                        <!--begin::Col-->
-                        <div class="col-lg-8 fv-row">
-                            <span class="fw-bold text-gray-800 fs-6">{{ $users->no_bpjskes }}</span>
-                        </div>
-                        <!--end::Col-->
-                    </div>
-                    <!--end::Input group-->
-                    <!--begin::Input group-->
-                    <div class="row mb-7">
-                        <!--begin::Label-->
-                        <label class="col-lg-4 fw-bold text-muted">No BPJS Ketenagakerjaan</label>
-                        <!--end::Label-->
-                        <!--begin::Col-->
-                        <div class="col-lg-8 fv-row">
-                            <span class="fw-bold text-gray-800 fs-6">{{ $users->no_bpjsket }}</span>
-                        </div>
-                        <!--end::Col-->
-                    </div>
-                    <!--end::Input group-->
-                    <!--begin::Input group-->
-                    <div class="row mb-7">
-                        <!--begin::Label-->
-                        <label class="col-lg-4 fw-bold text-muted">No HP</label>
-                        <!--end::Label-->
-                        <!--begin::Col-->
-                        <div class="col-lg-8 fv-row">
-                            <span class="fw-bold text-gray-800 fs-6">{{ $users->nohp }}</span>
-                        </div>
-                        <!--end::Col-->
-                    </div>
-                    <!--end::Input group-->
-                    <!--begin::Input group-->
-                    <div class="row mb-7">
-                        <!--begin::Label-->
-                        <label class="col-lg-4 fw-bold text-muted">Ukuran Baju</label>
-                        <!--end::Label-->
-                        <!--begin::Col-->
-                        <div class="col-lg-8 fv-row">
-                            <span class="fw-bold text-gray-800 fs-6">{{ $users->uk_baju }}</span>
-                        </div>
-                        <!--end::Col-->
-                    </div>
-                    <!--end::Input group-->
-                    <!--begin::Input group-->
-                    <div class="row mb-7">
-                        <!--begin::Label-->
-                        <label class="col-lg-4 fw-bold text-muted">Ukuran Celana</label>
-                        <!--end::Label-->
-                        <!--begin::Col-->
-                        <div class="col-lg-8 fv-row">
-                            <span class="fw-bold text-gray-800 fs-6">{{ $users->uk_celana }}</span>
-                        </div>
-                        <!--end::Col-->
-                    </div>
-                    <!--end::Input group-->
-                    <!--begin::Input group-->
-                    <div class="row mb-7">
-                        <!--begin::Label-->
-                        <label class="col-lg-4 fw-bold text-muted">Ukuran Sepatu</label>
-                        <!--end::Label-->
-                        <!--begin::Col-->
-                        <div class="col-lg-8 fv-row">
-                            <span class="fw-bold text-gray-800 fs-6">{{ $users->uk_sepatu }}</span>
-                        </div>
-                        <!--end::Col-->
-                    </div>
-                    <!--end::Input group-->
-                    <!--begin::Input group-->
-                    <div class="row mb-7">
-                        <!--begin::Label-->
-                        <label class="col-lg-4 fw-bold text-muted">Alamat</label>
-                        <!--end::Label-->
-                        <!--begin::Col-->
-                        <div class="col-lg-8 fv-row">
-                            <span class="fw-bold text-gray-800 fs-6">{{ $users->alamat }}</span>
+                            <span class="fw-bold text-gray-800 fs-6">{{ $users->kelamin->nama }}</span>
                         </div>
                         <!--end::Col-->
                     </div>

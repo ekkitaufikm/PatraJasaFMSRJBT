@@ -114,7 +114,7 @@ class CutiController extends Controller
         $surat_waktu = $request->surat_waktu;  
         $suratWaktunew = date("d-m-Y", strtotime($surat_waktu));
 
-        if($request->status == 2 OR $request->status == 3){
+        if($request->status == 2 OR $request->status == 3 OR $request->status == 4){
             $dataPengajuanCuti = [
                 'status'        => $request->status,
             ];

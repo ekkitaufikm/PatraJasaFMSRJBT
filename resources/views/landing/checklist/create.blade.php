@@ -47,7 +47,7 @@
                         <div class="form-box">
                             <div class="form-title-wrap">
                                 <h3 class="title d-flex align-items-center justify-content-between">
-                                    <span><i class="la la-briefcase mr-2 text-gray"></i>Checklist Kebersihan</span>
+                                    <span><i class="la la-briefcase mr-2 text-gray"></i>Checklist Toilet</span>
                                     <span class="font-size-13 text-gray"><span class="text-danger">*</span> Required</span>
                                 </h3>
                             </div>
@@ -58,6 +58,15 @@
                                         <div class="form-group">
                                             <span class="la la-user form-icon"></span>
                                             <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Nopeg</label>
+                                        <div class="form-group">
+                                            <span class="la la-user form-icon"></span>
+                                            <input type="text" class="form-control" name="nip" placeholder="Nopeg">
                                         </div>
                                     </div>
                                 </div>
@@ -91,22 +100,19 @@
                                 </div>
                                 <div class="col-lg-6 responsive-column">
                                     <div class="input-box">
-                                        <label class="label-text">Nama Item yang Dibersihkan</label>
-                                        <div class="form-group select-contain w-auto">
+                                        <label class="label-text">Area Toilet</label>
+                                        <div class="form-group">
                                             <span class="la la-user form-icon"></span>
-                                            <select class="select-contain-select" name="item">
-                                                <option value="">Pilih Item</option>
-                                                <option value="Floor">Floor</option>
-                                                <option value="Wall">Wall</option>
-                                                <option value="Rubbish Bin">Rubbish Bin</option>
-                                                <option value="Mirror">Mirror</option>
-                                                <option value="Hand Soap">Hand Soap</option>
-                                                <option value="Tissue">Tissue</option>
-                                                <option value="Wastafel">Wastafel</option>
-                                                <option value="Toilet Bowl">Toilet Bowl</option>
-                                                <option value="Urinoir">Urinoir</option>
-                                                <option value="Hand Dryer">Hand Dryer</option>
-                                            </select >
+                                            <input type="text" class="form-control" name="area_toilet" placeholder="Area Toilet">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Tanggal</label>
+                                        <div class="form-group">
+                                            <span class="la la-user form-icon"></span>
+                                            <input type="date" class="form-control" name="tanggal">
                                         </div>
                                     </div>
                                 </div>
@@ -127,13 +133,16 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6 responsive-column">
+                                    
+                                </div>
+                                <div class="col-lg-6 responsive-column">
                                     <div class="input-box">
-                                        <label class="label-text">Apakah Sudah Dibersihkan?</label>
+                                        <label class="label-text">Floor</label>
                                         <div class="form-group">
                                             <!--begin::Checkbox-->
                                             <label class="form-check form-check-custom form-check-solid me-10">
                                                 <!--begin::Input-->
-                                                <input class="form-check-input h-20px w-20px" type="checkbox" name="bersihan" value="Sudah" />
+                                                <input class="form-check-input h-20px w-20px" type="checkbox" name="floor" value="Sudah" />
                                                 <!--end::Input-->
                                                 <!--begin::Label-->
                                                 <span class="form-check-label fw-bold">Sudah</span>
@@ -143,10 +152,353 @@
                                             <!--begin::Checkbox-->
                                             <label class="form-check form-check-custom form-check-solid">
                                                 <!--begin::Input-->
-                                                <input class="form-check-input h-20px w-20px" name="bersihan" type="checkbox" value="Belum" />
+                                                <input class="form-check-input h-20px w-20px" name="floor" type="checkbox" value="Belum" />
                                                 <!--end::Input-->
                                                 <!--begin::Label-->
                                                 <span class="form-check-label fw-bold">Belum</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="floor" type="checkbox" value="Tidak Ada" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Tidak Ada</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Wall</label>
+                                        <div class="form-group">
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid me-10">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" type="checkbox" name="wall" value="Sudah" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Sudah</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="wall" type="checkbox" value="Belum" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Belum</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="wall" type="checkbox" value="Tidak Ada" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Tidak Ada</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Rubbish Bin</label>
+                                        <div class="form-group">
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid me-10">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" type="checkbox" name="rubbish_bin" value="Sudah" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Sudah</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="rubbish_bin" type="checkbox" value="Belum" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Belum</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="rubbish_bin" type="checkbox" value="Tidak Ada" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Tidak Ada</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Mirror</label>
+                                        <div class="form-group">
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid me-10">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" type="checkbox" name="mirror" value="Sudah" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Sudah</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="mirror" type="checkbox" value="Belum" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Belum</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="mirror" type="checkbox" value="Tidak Ada" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Tidak Ada</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Hand Soap</label>
+                                        <div class="form-group">
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid me-10">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" type="checkbox" name="hand_soap" value="Sudah" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Sudah</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="hand_soap" type="checkbox" value="Belum" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Belum</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="hand_soap" type="checkbox" value="Tidak Ada" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Tidak Ada</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Tissue</label>
+                                        <div class="form-group">
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid me-10">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" type="checkbox" name="tissue" value="Sudah" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Sudah</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="tissue" type="checkbox" value="Belum" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Belum</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="tissue" type="checkbox" value="Tidak Ada" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Tidak Ada</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Wastafel</label>
+                                        <div class="form-group">
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid me-10">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" type="checkbox" name="wastafel" value="Sudah" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Sudah</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="wastafel" type="checkbox" value="Belum" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Belum</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="wastafel" type="checkbox" value="Tidak Ada" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Tidak Ada</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Toilet Bowl</label>
+                                        <div class="form-group">
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid me-10">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" type="checkbox" name="toilet_bowl" value="Sudah" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Sudah</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="toilet_bowl" type="checkbox" value="Belum" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Belum</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="toilet_bowl" type="checkbox" value="Tidak Ada" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Tidak Ada</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Urinoir</label>
+                                        <div class="form-group">
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid me-10">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" type="checkbox" name="urinoir" value="Sudah" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Sudah</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="urinoir" type="checkbox" value="Belum" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Belum</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="urinoir" type="checkbox" value="Tidak Ada" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Tidak Ada</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 responsive-column">
+                                    <div class="input-box">
+                                        <label class="label-text">Hand Dryer</label>
+                                        <div class="form-group">
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid me-10">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" type="checkbox" name="hand_dryer" value="Sudah" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Sudah</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="hand_dryer" type="checkbox" value="Belum" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Belum</span>
+                                                <!--end::Label-->
+                                            </label>
+                                            <!--end::Checkbox-->
+                                            <!--begin::Checkbox-->
+                                            <label class="form-check form-check-custom form-check-solid">
+                                                <!--begin::Input-->
+                                                <input class="form-check-input h-20px w-20px" name="hand_dryer" type="checkbox" value="Tidak Ada" />
+                                                <!--end::Input-->
+                                                <!--begin::Label-->
+                                                <span class="form-check-label fw-bold">Tidak Ada</span>
                                                 <!--end::Label-->
                                             </label>
                                             <!--end::Checkbox-->
