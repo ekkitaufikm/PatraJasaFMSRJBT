@@ -1,11 +1,12 @@
 CHANGELOG
 =========
 
-6.1
----
+5.4.21
+------
 
- * Parameters implementing `TranslatableInterface` are processed
- * Add the file extension to the `XliffFileDumper` constructor
+ * [BC BREAK] The following data providers for `ProviderFactoryTestCase` are now static:
+   `supportsProvider()`, `createProvider()`, `unsupportedSchemeProvider()`and `incompleteDsnProvider()`
+ * [BC BREAK] `ProviderTestCase::toStringProvider()` is now static
 
 5.4
 ---
