@@ -115,14 +115,18 @@
                                             <td>{{ $p->nip }}</td>
                                             <td>{{ $p->nama }}</td>
                                             <td>
-                                                @php
-                                                    echo \DB::table('pengajuan_cuti')->where(['nip' => $p->nip])->count();
-                                                @endphp
+                                                @if (DB::table('pengajuan_cuti')->where('tanggal_pengajuan') == date('Y'))
+                                                    @php
+                                                        echo \DB::table('pengajuan_cuti')->where(['nip' => $p->nip])->count();
+                                                    @endphp
+                                                @else
+                                                    0
+                                                @endif
                                             </td>
                                             <td>{{ $p->kelamin->nama }}</td>
                                             <td>{{ $p->agama->nama }}</td>
                                             <td>{{ $p->jabatan->nama }}</td>
-                                            <td>{{ $p->area->nama }}</td>
+                                            <td>{{ $p->area->nama ?? '' }}</td>
                                             <td>
                                                 @if ($p->status == 1)
                                                     <span class="badge badge-light-success me-auto">Aktif</span>    

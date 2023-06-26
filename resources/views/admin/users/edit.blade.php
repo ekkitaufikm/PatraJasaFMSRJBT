@@ -115,7 +115,7 @@
                                     <div class="mb-3">
                                         <label class="col-form-label pt-0">Area</label>
                                         <input type="hidden" name="idArea" value="{{ $users->idArea }}">
-                                        <select id="select-sem" class="form-select select2" name="idArea" disabled aria-label="Default select example">
+                                        <select id="select-sem" class="form-select select2" name="idArea" aria-label="Default select example">
                                             <option value="">Pilih Area</option>
                                             @foreach ($area as $r) 
                                                 <option value="{{ $r->idArea }}" {{ $r->idArea == $users->idArea ? 'selected' : '' }}>{{ $r->nama }}</option>
@@ -124,21 +124,21 @@
                                     </div>
                                     <div class="mb-3">
                                         <label class="col-form-label pt-0">Status</label>
-                                        <input type="hidden" name="idArea" value="{{ $users->idStatus }}">
+                                        <input type="hidden" name="status" value="{{ $users->status }}">
                                         <select id="select-sem" class="form-select select2" name="idStatus" aria-label="Default select example" required>
                                             <option value="">Pilih Status</option>
                                             @foreach ($status as $r) 
-                                                <option value="{{ $r->idStatus }}" {{ $r->idStatus == $users->idStatus ? 'selected' : '' }}>{{ $r->nama }}</option>
+                                                <option value="{{ $r->idStatus }}" {{ $r->idStatus == $users->status ? 'selected' : '' }}>{{ $r->nama }}</option>
                                             @endforeach
                                         </select >
                                     </div>
                                     <div class="mb-3">
                                         <label class="col-form-label pt-0">Role</label>
-                                        <input type="hidden" name="idArea" value="{{ $users->idRole }}">
+                                        <input type="hidden" name="role" value="{{ $users->role }}">
                                         <select id="select-sem" class="form-select select2" name="idRole" aria-label="Default select example" required>
                                             <option value="">Pilih Role</option>
                                             @foreach ($role as $r) 
-                                                <option value="{{ $r->idRole }}" {{ $r->idRole == $users->idRole ? 'selected' : '' }}>{{ $r->nama }}</option>
+                                                <option value="{{ $r->idRole }}" {{ $r->idRole == $users->role ? 'selected' : '' }}>{{ $r->nama }}</option>
                                             @endforeach
                                         </select >
                                     </div>

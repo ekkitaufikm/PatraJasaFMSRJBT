@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 // Admin
 Route::any('master/getArea/', 'Api\MasterController@getArea');
 Route::any('master/getRkbArea/', 'Api\MasterController@getRkbArea');
+

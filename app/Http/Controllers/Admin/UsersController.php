@@ -174,6 +174,7 @@ class UsersController extends Controller
                 'idAgama'       => $request->idAgama,
                 'idKelamin'     => $request->idKelamin,
                 'idJabatan'     => $request->idJabatan,
+                'idArea'        => $request->idArea,
                 'status'        => $request->idStatus,
                 'role'          => $request->idRole,
             ];
@@ -190,12 +191,14 @@ class UsersController extends Controller
                 'idAgama'       => $request->idAgama,
                 'idKelamin'     => $request->idKelamin,
                 'idJabatan'     => $request->idJabatan,
+                'idArea'        => $request->idArea,
                 'status'        => $request->idStatus,
                 'role'          => $request->idRole,
             ];
+            echo json_encode($dataUsers); die();
             // dd($dataUsers);
-            $this->mUsers->where('idUsers', $request->idUsers)->update($dataUsers);
-            return redirect("$this->url")->with('sukses', 'Data Tim Management berhasil di edit');
+            // $this->mUsers->where('idUsers', $request->idUsers)->update($dataUsers);
+            // return redirect("$this->url")->with('sukses', 'Data Tim Management berhasil di edit');
             // echo json_encode($dataInfo); die;
         }
     }
